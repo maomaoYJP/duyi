@@ -16,7 +16,7 @@ a{
 
 
 .container{
-    width: 80%;
+    width: 1000px;
     margin: 16px auto;
     outline: 1px solid #ccc;
 }
@@ -79,4 +79,40 @@ a{
 
 .radio.checked::after{
     transform: translateY(-50%) scale(1);
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 8px;
+    justify-items: center;
+}
+
+li img{
+    width: 76px;
+    height: 76px;;
+}
+
+li span{
+    display: block;
+    text-align: center;
+}
+
+.keywords{
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.keywords input{
+    padding-right: 40px;
+    border-radius: 6px;
+    padding: 8px;
+    outline: none;
+    border: 0; 
+}
+
+.search-ico{
+    padding: 0 8px;
+    border-left: 1px solid #ccc;
 }
