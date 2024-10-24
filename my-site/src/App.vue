@@ -1,21 +1,25 @@
 <template>
   <div>
     <h1>App组件</h1>
-    <Avatar :url="'https://picsum.photos/200/300'" :size="200"></Avatar>
-    <Icon :type="'arrowDown'"></Icon>
+    <Pager :current="current" @pageChange="handlePageChange"></Pager>
   </div>
 </template>
 <script>
 import Avatar from "./components/Avatar.vue";
-import Icon from "./components/icon.vue";
+import Pager from "./components/Pager.vue";
 export default {
-  components: { Avatar, Icon },
+  components: { Avatar, Pager },
   name: "App",
+  data() {
+    return {
+      current: 2,
+    };
+  },
+  methods: {
+    handlePageChange(newPage) {
+      this.current = newPage;
+    },
+  },
 };
 </script>
-<style scoped>
-.iconfont {
-  color: red;
-  font-size: 30px;
-}
-</style>
+<style scoped></style>
